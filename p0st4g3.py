@@ -7,9 +7,9 @@ import sys
 parser = argparse.ArgumentParser()
 parser.add_argument("--ip", help="The IP address of the SMTP server.")
 parser.add_argument("--wordlist", help="Wordlist file of usernames to check.")
-parser.parse_args()
+args = parser.parse_args()
 
-with open(args.wordlist, "r") as wordList:
+with open(parser.wordlist, "r") as wordList:
 	words = [word.strip() for word in wordList]
 
 #Establish the connection
