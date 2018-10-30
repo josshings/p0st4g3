@@ -13,10 +13,10 @@ with open(args.wordlist, "r") as wordList:
 	words = [word.strip() for word in wordList]
 
 #Establish the connection
-print "[*] Attempting to connect to SMTP on %s..." % ip
+print "[*] Attempting to connect to SMTP on %s..." % args.ip
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 connect = s.connect((args.ip,25))
-print "[+] Connected successfully to %s!\n" % ip
+print "[+] Connected successfully to %s!\n" % args.ip
 
 #Print the banner
 print "[*] Getting banner..."
